@@ -3,6 +3,9 @@ import {
   Controller,
   Get,
   Headers,
+  Inject,
+  Logger,
+  LoggerService,
   Param,
   Post,
   Query,
@@ -21,6 +24,7 @@ export class UsersController {
   constructor(
     private usersService: UsersService,
     private authService: AuthService,
+    @Inject(Logger) private readonly logger: LoggerService,
   ) {}
 
   @Post()
