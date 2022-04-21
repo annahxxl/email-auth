@@ -5,6 +5,7 @@ import authConfig from './config/authConfig';
 import emailConfig from './config/emailConfig';
 import { validationSchema } from './config/validationSchema';
 import { UsersModule } from './users/users.module';
+import { ExceptionModule } from './exception/exception.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { UsersModule } from './users/users.module';
       validationSchema,
     }),
     TypeOrmModule.forRoot(),
+    ExceptionModule,
   ],
   controllers: [],
   providers: [],
