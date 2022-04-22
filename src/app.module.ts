@@ -7,6 +7,8 @@ import { validationSchema } from './config/validationSchema';
 import { UsersModule } from './users/users.module';
 import { ExceptionModule } from './exception/exception.module';
 import { LoggingModule } from './logging/logging.module';
+import { HealthCheckController } from './health-check/health-check.controller';
+import { TerminusModule } from '@nestjs/terminus';
 
 @Module({
   imports: [
@@ -20,8 +22,8 @@ import { LoggingModule } from './logging/logging.module';
     TypeOrmModule.forRoot(),
     ExceptionModule,
     LoggingModule,
+    TerminusModule,
   ],
-  controllers: [],
-  providers: [],
+  controllers: [HealthCheckController],
 })
 export class AppModule {}
