@@ -6,9 +6,9 @@ import {
   UnprocessableEntityException,
 } from '@nestjs/common';
 import { EmailService } from 'src/email/email.service';
-import { UserInfo } from './UserInfo';
+import { UserInfo } from './interface/UserInfo';
 import { InjectRepository } from '@nestjs/typeorm';
-import { UserEntity } from './entity/user.entity';
+import { UserEntity } from './infra/db/entity/user.entity';
 import { Connection, Repository } from 'typeorm';
 import { ulid } from 'ulid';
 import { AuthService } from 'src/auth/auth.service';

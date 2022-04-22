@@ -14,15 +14,15 @@ import {
 import { CommandBus, QueryBus } from '@nestjs/cqrs';
 import { AuthGuard } from 'src/auth.guard';
 import { AuthService } from 'src/auth/auth.service';
-import { CreateUserCommand } from './command/create-user.command';
-import { LoginCommand } from './command/login.command';
-import { VerifyEmailCommand } from './command/verify-email.command';
+import { CreateUserCommand } from '../application/command/create-user.command';
+import { LoginCommand } from '../application/command/login.command';
+import { VerifyEmailCommand } from '../application/command/verify-email.command';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UserLoginDto } from './dto/user-login.dto';
 import { VerifyEmailDto } from './dto/verify-email.dto';
-import { GetUserInfoQuery } from './query/get-user-info.query';
+import { GetUserInfoQuery } from '../application/query/get-user-info.query';
 import { UserInfo } from './UserInfo';
-import { UsersService } from './users.service';
+import { UsersService } from '../users.service';
 
 @Controller('users')
 export class UsersController {
